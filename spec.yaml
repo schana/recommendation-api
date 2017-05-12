@@ -81,6 +81,12 @@ paths:
           description: The article to use as a search seed
           type: string
           required: false
+        - name: count
+          in: query
+          description: The max number of articles to return
+          type: int
+          required: false
+          default: 24
       x-amples:
         - title: normal source and target
           request:
@@ -107,7 +113,7 @@ paths:
               source: qqq
               target: de
           response:
-            status: 500
+            status: 504
             headers:
               content-type: application/json
         - title: bad seed

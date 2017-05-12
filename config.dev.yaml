@@ -75,6 +75,14 @@ services:
         query: '{{ default(request.query, {}) }}'
         headers: '{{request.headers}}'
         body: '{{request.body}}'
+      wdqsapi_req:
+        method: 'post'
+        uri: 'https://query.wikidata.org/bigdata/namespace/wdq/sparql'
+        headers:
+          user-agent: '{{user-agent}}'
+        body:
+          format: 'json'
+          query: '{{request.query}}'
       queries:
         pageviews:
           domain: '{{params.source}}.wikipedia.org'

@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://phabricator.wikimedia.org/tag/recommendation-api/"
   },
-  "homepage": "https://github.com/schana/recommendation-api",
+  "homepage": "https://meta.wikimedia.org/wiki/Recommendation_API",
   "dependencies": {
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
