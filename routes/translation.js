@@ -18,14 +18,14 @@ let app;
 
 function recommend(req, res, source, target, seed) {
     let count = 24;
-    if (Object.hasOwnProperty.call(req.query || {}, 'count')) {
+    if (req.query && req.query.count) {
         count = parseInt(req.query.count, 10);
-        if (isNaN(count)) {
+        if (isNaN(count) || count < 1 || count > 500) {
             throw new sUtil.HTTPError({
                 status: 400,
                 type: 'bad_request',
                 title: 'Bad request',
-                detail: 'count parameter was not a number'
+                detail: 'count parameter was invalid'
             });
         }
     }

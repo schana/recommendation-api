@@ -126,3 +126,12 @@ paths:
             status: 404
             headers:
               content-type: application/json
+        - title: invalid count
+          request:
+            params:
+              source: en
+              target: de
+            query:
+              count: -123
+          response:
+            status: 400

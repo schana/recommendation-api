@@ -77,7 +77,7 @@ services:
         body: '{{request.body}}'
       wdqsapi_req:
         method: 'post'
-        uri: 'https://query.wikidata.org/bigdata/namespace/wdq/sparql'
+        uri: 'https://query.wikidata.org/sparql'
         headers:
           user-agent: '{{user-agent}}'
         body:
